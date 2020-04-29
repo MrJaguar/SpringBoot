@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title th:text="${titulo}">Insert title here</title>
+</head>
+<body>
+	<h1 th:text="${h1}">Hola gente</h1>
+	Clave
+	<h2 th:text="${clave}">Hola gente</h2>
+	Salon
+	<h2 th:text="${salon}">Hola gente</h2>
+	Maestro
+	<h2 th:text="${maestro}">Hola gente</h2>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Matricula</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each=" alumno : ${alumnos}">
+				<td th:text="${alumno.nombre}"></td>
+				<td th:text="${alumno.matricula}"></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
