@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title th:text="${titulo}">Insert title here</title>
+</head>
+<body>
+	<h1 th:text="${h1}">Hola gente</h1>
+
+	<form th:action="@{/form/resultadoObject}" method="get"
+		th:object="${usuario}">
+		<div>
+			<label for="name">Nombre</label>
+			<div>
+				<input type="text" id="name" th:field="*{name}">
+			</div>
+			<div th:if="${ error != null && error.containsKey('name')}"
+				th:text="${error.name}"></div>
+			<div th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+		</div>
+		<div>
+			<label for="lastName">Apellido</label>
+			<div>
+				<input type="text" id="lastName" th:field="*{lastName}">
+			</div>
+			<div th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></div>
+		</div>
+		<div>
+			<label for="age">Edad</label>
+			<div>
+				<input type="text" id="age" th:field="*{age}">
+			</div>
+			<div th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></div>
+		</div>
+		<div>
+			<div>
+				<input type="submit" id="submit" value="Enviar">
+			</div>
+		</div>
+
+	</form>
+
+
+</body>
+</html>
