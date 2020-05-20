@@ -27,6 +27,8 @@ public class Usuario {
 		this.age = age;
 	}
 
+	/**Este metodo sirve para obtener el nombre del usuario
+	 * @return name el nombre del usuario*/
 	public String getName() {
 		return name;
 	}

@@ -1,0 +1,2 @@
+insert into alumno (nombre, apellido, edad, fecha_nacimiento) values ('luis', 'guajardo', 24, '1995-11-26');
+insert into alumno (nombre, apellido, edad, fecha_nacimiento) values ('eduardo', 'guajardo', 24, '1995-11-26');
